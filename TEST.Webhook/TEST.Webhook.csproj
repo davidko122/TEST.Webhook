@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<UserSecretsId>a36c557b-8077-4f59-a54b-51425ee968b5</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<Compile Remove="Components\**" />
+		<Content Remove="Components\**" />
+		<EmbeddedResource Remove="Components\**" />
+		<None Remove="Components\**" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+		<PackageReference Include="Volo.Abp.Swashbuckle" Version="8.2.0" />
+		<PackageReference Include="Volo.Abp.Autofac" Version="8.2.0" />
+		<PackageReference Include="Volo.Abp.AspNetCore.SignalR" Version="8.2.0" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\TEST.Webhook.Application\TEST.Webhook.Application.csproj" />
+	</ItemGroup>
+
+
+</Project>
