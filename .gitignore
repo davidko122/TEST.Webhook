@@ -1,0 +1,21 @@
+packages/*
+*.json
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+*.config
+!packages.config
+*/**/AppSetting.js
+*/**/AppSeting.json
+*/**/App.config
+*/**/app.config
+*/app.config
+
+# Visual Studio 2015 cache/options directory
+.vs/
+*/Logs
+/**/Logs
